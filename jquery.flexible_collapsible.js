@@ -1,8 +1,8 @@
 (function($) {
   $.fn.flexible_collapsible = function(options) {
 
-      if(this.data('xelera_collapsible_api')) {
-        return this.data('xelera_collapsible_api');
+      if(this.data('flexible_collapsible_api')) {
+        return this.data('flexible_collapsible_api');
       }
 
       var $self = this;
@@ -140,7 +140,7 @@
       //return api in api-functions? brainfuck
       var destroy = function () {
         $button.unbind('click', toggle_expandable);
-        $self.removeData('xelera_collapsible_api');
+        $self.removeData('flexible_collapsible_api');
         return $self;
       };
 
@@ -168,7 +168,7 @@
       }
 
       //Save api
-      this.data('xelera_collapsible_api', {
+      this.data('flexible_collapsible_api', {
         'close' : close,
         'expand' : expand,
         'destroy' : destroy,
